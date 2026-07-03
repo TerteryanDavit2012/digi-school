@@ -148,7 +148,7 @@ public class Lesson {
                 System.out.println(1);
             }
             //37
-            if ((y - a ==  - b) && (c - y == d - c)) {
+            if ((y - x == z - y) && (z - y == a - z)) {
                 System.out.println(true);
             } else {
                 System.out.println(false);
@@ -307,7 +307,18 @@ public class Lesson {
             if (z >= y && y >= x && x >= a) {
                 System.out.println(z + " " + y + " " + x + " " + a);
             }
+            int or = 1;
 
+            switch (or) {
+                case 1 -> System.out.println("Erkushabti(DASI ENQ!!!)");
+                case 2 -> System.out.println("Eereqshabti(Hangist)");
+                case 3 -> System.out.println("Choreqshabt(DASI ENQ!!!)");
+                case 4 -> System.out.println("Hingshabti(Hangist)");
+                case 5 -> System.out.println("Urbat(DASI ENQ!!!)");
+                case 6 -> System.out.println("Shabat(Hangist)");
+                case 7 -> System.out.println("Kiraki(Hangist)");
+                default -> System.out.println("TENC SHABATVA OR CHKA!!!");
+            }
         }
     }
 }
