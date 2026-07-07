@@ -1,324 +1,160 @@
 public class Lesson {
     public static void main(String[] args) {
+                int n3 = 357;
+                int n4 = 4567;
+                int k = 200;
 
-        int a = 20;
-        int x = 10, y = 15, z = 5;
-        //21
-        if (x > z && x > y) {
-            System.out.println(x);
-        } else if (y > z && y > x) {
-            System.out.println(y);
-        } else {
-            System.out.println(z);
-        }
-        //22
-        if (x < z && x < y) {
-            System.out.println(x);
-        } else if (y < z && y < x) {
-            System.out.println(y);
-        } else {
-            System.out.println(z);
-        }
-        //23
-        if (x == 1 || y == 1 || z == 1) {
-            System.out.println(true);
-        } else {
-            System.out.println(false);
-        }
-        //24
-        if ((x == 2 && y == 2) || (x == 2 && z == 2) || (z == 2 && y == 2)) {
-            System.out.println(true);
-        } else {
-            System.out.println(false);
-        }
-        //25
-        if ((x + y >= z) || (x + z >= y) || (z + y >= x)) {
-            System.out.println(y = 1);
-        } else
-            System.out.println(y = 2);
-        //26
-        if (x % 2 == 0) {
-            System.out.println(1);
-        } else {
-            System.out.println(2);
-        }
-        if (y % 2 == 0) {
-            System.out.println(1);
-        } else {
-            System.out.println(2);
-        }
-        if (z % 2 == 0) {
-            System.out.println(1);
-        } else {
-            System.out.println(2);
-        }
-        y = 15;
-        //27
-        if (y - x == z - y) {
-            System.out.println(true);
-        } else {
-            System.out.println(false);
-        }
-        //28
-        if (y * y == x * z) {
-            System.out.println(true);
-        } else {
-            System.out.println(false);
-        }
-        //29
-        if (x <= y && y <= z)
-            System.out.println(x + " " + y + " " + z);
+                int x = n3 / 100;
+                int y = (n3 / 10) % 10;
+                int z = n3 % 10;
 
-        if (x <= z && z <= y)
-            System.out.println(x + " " + z + " " + y);
-
-        if (y <= x && x <= z)
-            System.out.println(y + " " + x + " " + z);
-
-        if (y <= z && z <= x)
-            System.out.println(y + " " + z + " " + x);
-
-        if (z <= x && x <= y)
-            System.out.println(z + " " + x + " " + y);
-
-        if (z <= y && y <= x)
-            System.out.println(z + " " + y + " " + x);
-        //30
-        if (x >= y && y >= z)
-            System.out.println(x + " " + y + " " + z);
-
-        if (x >= z && z >= y)
-            System.out.println(x + " " + z + " " + y);
-
-        if (y >= x && x >= z)
-            System.out.println(y + " " + x + " " + z);
-
-        if (y >= z && z >= x)
-            System.out.println(y + " " + z + " " + x);
-
-        if (z >= x && x >= y)
-            System.out.println(z + " " + x + " " + y);
-        if (z >= y && y >= x)
-            System.out.println(z + " " + y + " " + x);
-        //31
-        if (x > z && x > y && x > a) {
-            System.out.println(x);
-        } else if (y > z && y > x && y > a) {
-            System.out.println(y);
-        } else if (y > z && y > x && x > a) {
-            System.out.println(z);
-        } else {
-            System.out.println(a);
-            //32
-            if (x < z && x < y && x < a) {
-                System.out.println(x);
-            } else if (y < z && y < x && y < a) {
-                System.out.println(y);
-            } else if (z < x && z < y && z < a) {
-                System.out.println(z);
-            } else {
+                //51
+                boolean a = (z == x + y);
                 System.out.println(a);
-            }
-            //33
-            if (x == 1 || y == 1 || z == 1 || a == 1) {
-                System.out.println(true);
-            } else {
-                System.out.println(false);
-            }
-            //34
-            if (x + y == z + a || x + z == y + a || x + a == y + z) {
-                System.out.println(true);
-            } else {
-                System.out.println(false);
-            }
-            //35
-            if (x == y + z + a || y == x + z + a || z == x + y + a || a == x + y + z) {
-                System.out.println(true);
-            } else {
-                System.out.println(false);
-            }
-            //36
-            if (x % 2 == 1 && y % 2 == 1) {
-                System.out.println(2);
-            } else if (x % 2 == 1 && z % 2 == 1) {
-                System.out.println(2);
-            } else if (x % 2 == 1 && a % 2 == 1) {
-                System.out.println(2);
-            } else {
-                System.out.println(1);
-            }
-            //37
-            if ((y - x == z - y) && (z - y == a - z)) {
-                System.out.println(true);
-            } else {
-                System.out.println(false);
-            }
-            //38
-            if (x != 0 && y != 0 && z != 0 &&
-                    y * y == x * z &&
-                    z * z == y * a) {
-                System.out.println(true);
-            } else {
-                System.out.println(false);
-            }
-            //39
-            if (a <= x && x <= y && y <= z) {
-                System.out.println(a + " " + x + " " + y + " " + z);
-            }
-            if (a <= x && x <= z && z <= y) {
-                System.out.println(a + " " + x + " " + z + " " + y);
-            }
-            if (a <= y && y <= x && x <= z) {
-                System.out.println(a + " " + y + " " + x + " " + z);
-            }
-            if (a <= y && y <= z && z <= x) {
-                System.out.println(a + " " + y + " " + z + " " + x);
-            }
-            if (a <= z && z <= x && x <= y) {
-                System.out.println(a + " " + z + " " + x + " " + y);
-            }
-            if (a <= z && z <= y && y <= x) {
-                System.out.println(a + " " + z + " " + y + " " + x);
-            }
-            if (x <= a && a <= y && y <= z) {
-                System.out.println(x + " " + a + " " + y + " " + z);
-            }
-            if (x <= a && a <= z && z <= y) {
-                System.out.println(x + " " + a + " " + z + " " + y);
-            }
-            if (x <= y && y <= a && a <= z) {
-                System.out.println(x + " " + y + " " + a + " " + z);
-            }
-            if (x <= y && y <= z && z <= a) {
-                System.out.println(x + " " + y + " " + z + " " + a);
-            }
-            if (x <= z && z <= a && a <= y) {
-                System.out.println(x + " " + z + " " + a + " " + y);
-            }
-            if (x <= z && z <= y && y <= a) {
-                System.out.println(x + " " + z + " " + y + " " + a);
-            }
-            if (y <= a && a <= x && x <= z) {
-                System.out.println(y + " " + a + " " + x + " " + z);
-            }
-            if (y <= a && a <= z && z <= x) {
-                System.out.println(y + " " + a + " " + z + " " + x);
-            }
-            if (y <= x && x <= a && a <= z) {
-                System.out.println(y + " " + x + " " + a + " " + z);
-            }
-            if (y <= x && x <= z && z <= a) {
-                System.out.println(y + " " + x + " " + z + " " + a);
-            }
-            if (y <= z && z <= a && a <= x) {
-                System.out.println(y + " " + z + " " + a + " " + x);
-            }
-            if (y <= z && z <= x && x <= a) {
-                System.out.println(y + " " + z + " " + x + " " + a);
-            }
-            if (z <= a && a <= x && x <= y) {
-                System.out.println(z + " " + a + " " + x + " " + y);
-            }
-            if (z <= a && a <= y && y <= x){
-                System.out.println(z + " " + a + " " + y + " " + x);
-            }
-            if (z <= x && x <= a && a <= y) {
-                System.out.println(z + " " + x + " " + a + " " + y);
-            }
-            if (z <= x && x <= y && y <= a) {
-                System.out.println(z + " " + x + " " + y + " " + a);
-            }
-            if (z <= y && y <= a && a <= x) {
-                System.out.println(z + " " + y + " " + a + " " + x);
-            }
-            if (z <= y && y <= x && x <= a) {
-                System.out.println(z + " " + y + " " + x + " " + a);
-            }
-            //40
-            if (a >= x && x >= y && y >= z) {
-                System.out.println(a + " " + x + " " + y + " " + z);
-            }
-            if (a >= x && x >= z && z >= y) {
-                System.out.println(a + " " + x + " " + z + " " + y);
-            }
-            if (a >= y && y >= x && x >= z) {
-                System.out.println(a + " " + y + " " + x + " " + z);
-            }
-            if (a >= y && y >= z && z >= x) {
-                System.out.println(a + " " + y + " " + z + " " + x);
-            }
-            if (a >= z && z >= x && x >= y) {
-                System.out.println(a + " " + z + " " + x + " " + y);
-            }
-            if (a >= z && z >= y && y >= x) {
-                System.out.println(a + " " + z + " " + y + " " + x);
-            }
-            if (x >= a && a >= y && y >= z) {
-                System.out.println(x + " " + a + " " + y + " " + z);
-            }
-            if (x >= a && a >= z && z >= y) {
-                System.out.println(x + " " + a + " " + z + " " + y);
-            }
-            if (x >= y && y >= a && a >= z) {
-                System.out.println(x + " " + y + " " + a + " " + z);
-            }
-            if (x >= y && y >= z && z >= a) {
-                System.out.println(x + " " + y + " " + z + " " + a);
-            }
-            if (x >= z && z >= a && a >= y) {
-                System.out.println(x + " " + z + " " + a + " " + y);
-            }
-            if (x >= z && z >= y && y >= a) {
-                System.out.println(x + " " + z + " " + y + " " + a);
-            }
-            if (y >= a && a >= x && x >= z) {
-                System.out.println(y + " " + a + " " + x + " " + z);
-            }
-            if (y >= a && a >= z && z >= x) {
-                System.out.println(y + " " + a + " " + z + " " + x);
-            }
-            if (y >= x && x >= a && a >= z) {
-                System.out.println(y + " " + x + " " + a + " " + z);
-            }
-            if (y >= x && x >= z && z >= a) {
-                System.out.println(y + " " + x + " " + z + " " + a);
-            }
-            if (y >= z && z >= a && a >= x) {
-                System.out.println(y + " " + z + " " + a + " " + x);
-            }
-            if (y >= z && z >= x && x >= a) {
-                System.out.println(y + " " + z + " " + x + " " + a);
-            }
-            if (z >= a && a >= x && x >= y) {
-                System.out.println(z + " " + a + " " + x + " " + y);
-            }
-            if (z >= a && a >= y && y >= x){
-                System.out.println(z + " " + a + " " + y + " " + x);
-            }
-            if (z >= x && x >= a && a >= y) {
-                System.out.println(z + " " + x + " " + a + " " + y);
-            }
-            if (z >= x && x >= y && y >= a) {
-                System.out.println(z + " " + x + " " + y + " " + a);
-            }
-            if (z >= y && y >= a && a >= x) {
-                System.out.println(z + " " + y + " " + a + " " + x);
-            }
-            if (z >= y && y >= x && x >= a) {
-                System.out.println(z + " " + y + " " + x + " " + a);
-            }
-            int or = 1;
 
-            switch (or) {
-                case 1 -> System.out.println("Erkushabti(DASI ENQ!!!)");
-                case 2 -> System.out.println("Eereqshabti(Hangist)");
-                case 3 -> System.out.println("Choreqshabt(DASI ENQ!!!)");
-                case 4 -> System.out.println("Hingshabti(Hangist)");
-                case 5 -> System.out.println("Urbat(DASI ENQ!!!)");
-                case 6 -> System.out.println("Shabat(Hangist)");
-                case 7 -> System.out.println("Kiraki(Hangist)");
-                default -> System.out.println("TENC SHABATVA OR CHKA!!!");
+                //52
+                boolean b = (x == y || x == z || y == z);
+                System.out.println(b);
+
+                //53
+                if (n3 > k) {
+                    System.out.println((double)n3 / (x + y + z));
+                }
+                else {
+                    System.out.println((double)z / n3);
+                }
+
+                //54
+                int max = x;
+                if (y > max) {
+                    max = y;
+                }
+                if (z > max) {
+                    max = z;
+                }
+                System.out.println(max);
+
+                //55
+                int min = x;
+                if (y < min) {
+                    min = y;
+                }
+                if (z < min) {
+                    min = z;
+                }
+                System.out.println(min);
+
+                //56
+                if (z > y) {
+                    System.out.println((double)(x + y + z) / n3);
+                }
+                else {
+                    System.out.println(n3);
+                }
+
+                //57
+                if (n3 > 300) {
+                    System.out.println((double)y / z);
+                }
+                else {
+                    System.out.println((double)x / z);
+                }
+
+                //58
+                char f;
+                if (x + y < 5) {
+                    f = 'a';
+                }
+                else {
+                    f = 'b';
+                }
+                System.out.println(f);
+
+                int a4 = n4 / 1000;
+                int b4 = (n4 / 100) % 10;
+                int c4 = (n4 / 10) % 10;
+                int d4 = n4 % 10;
+
+                //61
+                boolean c = (c4 + d4 == a4 + b4);
+                System.out.println(c);
+
+                //62
+                if (n4 < 5000) {
+                    System.out.println((double)n4 / (d4 + b4));
+                }
+                else {
+                    System.out.println((double)n4 / (a4 + c4));
+                }
+
+                //63
+                if (a4 == 1 || b4 == 1 || c4 == 1 || d4 == 1) {
+                    System.out.println(1);
+                }
+                else {
+                    System.out.println(0);
+                }
+
+                //64
+                char s;
+                if (c4 + d4 == 5) {
+                    s = 's';
+                }
+                else {
+                    s = 'd';
+                }
+                System.out.println(s);
+
+                //65
+                if (c4 * d4 == 12) {
+                    System.out.println("y=12");
+                }
+                else {
+                    System.out.println("y=0");
+                }
+
+                //66
+                if (a4 == 4 || d4 == 4) {
+                    System.out.println("YES");
+                }
+                else {
+                    System.out.println("NO");
+                }
+
+                //67
+                int sum = a4 + b4 + c4 + d4;
+                if (n4 == sum * sum) {
+                    System.out.println("YES");
+                }
+                else {
+                    System.out.println("NO");
+                }
+
+                //68
+                if (d4 > c4) {
+                    System.out.println(d4 * b4);
+                }
+                else {
+                    System.out.println(1);
+                }
+
+                //69
+                int q;
+                if (a4 + b4 + c4 + d4 > 20) {
+                    q = 1;
+                }
+                else {
+                    q = 0;
+                }
+                System.out.println(q);
+
+                //70
+                if (a4 * b4 * c4 * d4 > 200) {
+                    q = a4 * b4 * c4 * d4;
+                }
+                else {
+                    q = 1;
+                }
+                System.out.println(q);
             }
         }
-    }
-}
