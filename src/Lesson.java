@@ -1,160 +1,80 @@
 public class Lesson {
     public static void main(String[] args) {
-                int n3 = 357;
-                int n4 = 4567;
-                int k = 200;
 
-                int x = n3 / 100;
-                int y = (n3 / 10) % 10;
-                int z = n3 % 10;
+        // 1
+        int[] arr1 = new int[2];
 
-                //51
-                boolean a = (z == x + y);
-                System.out.println(a);
+        arr1[0] = 5;
+        arr1[1] = 10;
 
-                //52
-                boolean b = (x == y || x == z || y == z);
-                System.out.println(b);
+        for (int i = 0; i < arr1.length; i++) {
+            System.out.println(arr1[i]);
+        }
 
-                //53
-                if (n3 > k) {
-                    System.out.println((double)n3 / (x + y + z));
-                }
-                else {
-                    System.out.println((double)z / n3);
-                }
+        // 2
+        int[] arr2 = new int[1000];
 
-                //54
-                int max = x;
-                if (y > max) {
-                    max = y;
-                }
-                if (z > max) {
-                    max = z;
-                }
-                System.out.println(max);
+        for (int i = 0; i < arr2.length; i++) {
+            arr2[i] = i + 1;
+        }
 
-                //55
-                int min = x;
-                if (y < min) {
-                    min = y;
-                }
-                if (z < min) {
-                    min = z;
-                }
-                System.out.println(min);
+        for (int i = 0; i < arr2.length; i++) {
+            System.out.print(arr2[i] + " ");
+        }
 
-                //56
-                if (z > y) {
-                    System.out.println((double)(x + y + z) / n3);
-                }
-                else {
-                    System.out.println(n3);
-                }
+        System.out.println();
 
-                //57
-                if (n3 > 300) {
-                    System.out.println((double)y / z);
-                }
-                else {
-                    System.out.println((double)x / z);
-                }
+        // 3
+        int[] arr3 = new int[20];
+        int index = 0;
 
-                //58
-                char f;
-                if (x + y < 5) {
-                    f = 'a';
-                }
-                else {
-                    f = 'b';
-                }
-                System.out.println(f);
+        for (int i = -19; i <= 19; i += 2) {
+            arr3[index] = i;
+            index++;
+        }
 
-                int a4 = n4 / 1000;
-                int b4 = (n4 / 100) % 10;
-                int c4 = (n4 / 10) % 10;
-                int d4 = n4 % 10;
+        for (int i = 0; i < arr3.length; i++) {
+            System.out.print(arr3[i] + " ");
+        }
 
-                //61
-                boolean c = (c4 + d4 == a4 + b4);
-                System.out.println(c);
+        System.out.println();
 
-                //62
-                if (n4 < 5000) {
-                    System.out.println((double)n4 / (d4 + b4));
-                }
-                else {
-                    System.out.println((double)n4 / (a4 + c4));
-                }
-
-                //63
-                if (a4 == 1 || b4 == 1 || c4 == 1 || d4 == 1) {
-                    System.out.println(1);
-                }
-                else {
-                    System.out.println(0);
-                }
-
-                //64
-                char s;
-                if (c4 + d4 == 5) {
-                    s = 's';
-                }
-                else {
-                    s = 'd';
-                }
-                System.out.println(s);
-
-                //65
-                if (c4 * d4 == 12) {
-                    System.out.println("y=12");
-                }
-                else {
-                    System.out.println("y=0");
-                }
-
-                //66
-                if (a4 == 4 || d4 == 4) {
-                    System.out.println("YES");
-                }
-                else {
-                    System.out.println("NO");
-                }
-
-                //67
-                int sum = a4 + b4 + c4 + d4;
-                if (n4 == sum * sum) {
-                    System.out.println("YES");
-                }
-                else {
-                    System.out.println("NO");
-                }
-
-                //68
-                if (d4 > c4) {
-                    System.out.println(d4 * b4);
-                }
-                else {
-                    System.out.println(1);
-                }
-
-                //69
-                int q;
-                if (a4 + b4 + c4 + d4 > 20) {
-                    q = 1;
-                }
-                else {
-                    q = 0;
-                }
-                System.out.println(q);
-
-                //70
-                if (a4 * b4 * c4 * d4 > 200) {
-                    q = a4 * b4 * c4 * d4;
-                }
-                else {
-                    q = 1;
-                }
-                System.out.println(q);
+        // 4
+        for (int i = 0; i < arr2.length; i++) {
+            if (arr2[i] % 5 == 0) {
+                System.out.print(arr2[i] + " ");
             }
         }
+
+        System.out.println();
+
+        // 5
+        double[] arr5 = {10.5, 24.12, 50.3, 100.5, 300.8, 467.23, 500.0};
+
+        for (int i = 0; i < arr5.length; i++) {
+            if (arr5[i] >= 24.12 && arr5[i] <= 467.23) {
+                System.out.println(arr5[i]);
+            }
+        }
+
+        // 6
+        int count = 0;
+
+        for (int i = 0; i < arr2.length; i++) {
+            if (arr2[i] % 2 == 0) {
+                count++;
+            }
+        }
+
+        System.out.println(count);
+
+        // 7
+        int n = 2;
+
+        if (n >= 1 && n <= 20) {
+            for (int i = 1; i <= 10; i++) {
+                System.out.println(n + " x " + i + " = " + (n * i));
+            }
+        }
+    }
+}
