@@ -1,80 +1,179 @@
 public class Lesson {
     public static void main(String[] args) {
 
-        // 1
-        int[] arr1 = new int[2];
+        int[] arr = {5, -3, 8, -2, 10, 4, -6, 7, 0, 12};
 
-        arr1[0] = 5;
-        arr1[1] = 10;
+        int a = 2;
+        int b = 8;
+        int c = -4;
+        int d = 10;
+        int k = 2;
 
-        for (int i = 0; i < arr1.length; i++) {
-            System.out.println(arr1[i]);
-        }
-
-        // 2
-        int[] arr2 = new int[1000];
-
-        for (int i = 0; i < arr2.length; i++) {
-            arr2[i] = i + 1;
-        }
-
-        for (int i = 0; i < arr2.length; i++) {
-            System.out.print(arr2[i] + " ");
-        }
-
-        System.out.println();
-
-        // 3
-        int[] arr3 = new int[20];
-        int index = 0;
-
-        for (int i = -19; i <= 19; i += 2) {
-            arr3[index] = i;
-            index++;
-        }
-
-        for (int i = 0; i < arr3.length; i++) {
-            System.out.print(arr3[i] + " ");
-        }
-
-        System.out.println();
-
-        // 4
-        for (int i = 0; i < arr2.length; i++) {
-            if (arr2[i] % 5 == 0) {
-                System.out.print(arr2[i] + " ");
-            }
-        }
-
-        System.out.println();
-
-        // 5
-        double[] arr5 = {10.5, 24.12, 50.3, 100.5, 300.8, 467.23, 500.0};
-
-        for (int i = 0; i < arr5.length; i++) {
-            if (arr5[i] >= 24.12 && arr5[i] <= 467.23) {
-                System.out.println(arr5[i]);
-            }
-        }
-
-        // 6
+        //211
+        double sum = 0;
         int count = 0;
-
-        for (int i = 0; i < arr2.length; i++) {
-            if (arr2[i] % 2 == 0) {
+        for (int i = 0; i < arr.length; i++) {
+            if (arr[i] > 0) {
+                sum += arr[i];
                 count++;
             }
         }
+        if (count > 0)
+            System.out.println(sum / count);
 
-        System.out.println(count);
-
-        // 7
-        int n = 2;
-
-        if (n >= 1 && n <= 20) {
-            for (int i = 1; i <= 10; i++) {
-                System.out.println(n + " x " + i + " = " + (n * i));
+        //214
+        sum = 0;
+        count = 0;
+        for (int i = 0; i < arr.length; i++) {
+            if (arr[i] < 0) {
+                sum += arr[i];
+                count++;
             }
         }
+        if (count > 0)
+            System.out.println(sum / count);
+
+        //215
+        int sum1 = 0;
+        for (int i = 0; i < arr.length; i += 2)
+            sum1 += arr[i];
+        System.out.println(sum1);
+
+        //216
+        int p = 1;
+        for (int i = 0; i < arr.length; i += 2)
+            p *= arr[i];
+        System.out.println(p);
+
+        //219
+        count = 0;
+        for (int i = 0; i < arr.length; i++) {
+            if (i % k == 0)
+                count++;
+        }
+        System.out.println(count);
+
+        //221
+        sum1 = 0;
+        for (int i = 0; i < arr.length; i++) {
+            if (arr[i] >= a && arr[i] <= b)
+                sum1 += arr[i];
+        }
+        System.out.println(sum1);
+
+        //222
+        p = 1;
+        for (int i = 0; i < arr.length; i++) {
+            if (arr[i] > c && arr[i] < d)
+                p *= arr[i];
+        }
+        System.out.println(p);
+
+        //223
+        count = 0;
+        for (int i = 0; i < arr.length; i++) {
+            if (arr[i] > a && arr[i] < b)
+                count++;
+        }
+        System.out.println(count);
+        //227
+        sum = 0;
+        count = 0;
+        for (int i = 0; i < arr.length; i++) {
+            if (i % k == 0) {
+                sum += arr[i];
+                count++;
+            }
+        }
+        if (count > 0)
+            System.out.println(sum / count);
+
+//228
+        sum1 = 0;
+        for (int i = 0; i < arr.length; i++) {
+            if (i % k == 0)
+                sum1 += arr[i];
+        }
+        System.out.println(sum1);
+
+//229
+        p = 1;
+        for (int i = 0; i < arr.length; i++) {
+            if (arr[i] - i > 0)
+                p *= arr[i];
+        }
+        System.out.println(p);
+
+//231
+        sum1 = 0;
+        for (int i = 0; i < arr.length; i++) {
+            if (arr[i] % 2 == 0)
+                sum1 += arr[i] * arr[i];
+        }
+        System.out.println(sum1);
+
+//232
+        count = 0;
+        for (int i = 0; i < arr.length; i++) {
+            if (arr[i] % 2 == 0)
+                count++;
+        }
+        System.out.println(count);
+
+//233
+        p = 1;
+        sum1 = 0;
+        for (int i = 0; i < arr.length; i++) {
+            if (arr[i] % 2 == 0) {
+                p *= arr[i];
+                sum1 += arr[i];
+            }
+        }
+        System.out.println(p);
+        System.out.println(sum1);
+
+//234
+        sum = 0;
+        count = 0;
+        for (int i = 0; i < arr.length; i++) {
+            if (arr[i] % 2 != 0) {
+                sum += arr[i];
+                count++;
+            }
+        }
+        if (count > 0)
+            System.out.println(sum / count);
+
+//236
+        p = 1;
+        count = 0;
+        for (int i = 0; i < arr.length; i++) {
+            if (arr[i] % 2 != 0) {
+                p *= arr[i];
+                count++;
+            }
+        }
+        System.out.println(count);
+        System.out.println(p);
+
+//237
+        count = 0;
+        for (int i = 0; i < arr.length; i++) {
+            if (arr[i] == 0)
+                count++;
+        }
+        System.out.println(count);
+
+//238
+        sum = 0;
+        count = 0;
+        for (int i = 0; i < arr.length; i++) {
+            if (arr[i] % 3 == 0) {
+                sum += arr[i];
+                count++;
+            }
+        }
+        if (count > 0)
+            System.out.println(sum / count);
     }
 }
