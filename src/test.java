@@ -1,23 +1,34 @@
+import model.Car;
+
 public class test {
     public static void main(String[] args) {
-        PC pc = new PC();
-        pc.operationSystem = "Windows";
-        pc.processor = "Intel Core i7";
-        pc.ram = 16;
-        pc.graphicsCard = "Nvidia Geforce GTX 1050";
-        pc.HDD = true;
-        pc.SSD = false;
-        pc.motherBoard = "Asus ROG Strix G14";
+        Car car = new Car();
 
-        System.out.println("PC specs");
-        System.out.println();
+        car.setName("BMW");
+        car.setModel("X5");
+        car.setPrice(50000);
+        car.setWeight(2200);
+        car.setColor("Black");
+        car.setPower(300);
+        car.setIsFormatic(true);
 
-        System.out.println("Operating System: " + pc.operationSystem);
-        System.out.println("Processor: " + pc.processor);
-        System.out.println("RAM: " + pc.ram);
-        System.out.println("Graphics Card: " + pc.graphicsCard);
-        System.out.println("Motherboard: " + pc.motherBoard);
-        System.out.println("HDD: " + (pc.HDD ? "Yes" : "No"));
-        System.out.println("SSD: " + (pc.SSD ? "Yes" : "No"));
+    Car car1 = new Car();
+
+        car1.setName("porshe");
+        car1.setModel("911gt3");
+        car1.setPrice(100000);
+        car1.setWeight(1400);
+        car1.setColor("green");
+        car1.setPower(1000);
+        car1.setIsFormatic(false);
+
+        Car car2 = new Car();
+        car.setName("mercedes");
+        car.setModel("c class");
+        car.setPrice(50000);
+        car.setWeight(2300);
+        car.setColor("white");
+        car.setPower(800);
+        car.setIsFormatic(true);
     }
 }
