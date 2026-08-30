@@ -55,6 +55,7 @@ public class ResturantService {
             total = total * 0.95;
         }
 
+
         return total;
     }
 
