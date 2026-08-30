@@ -84,10 +84,14 @@ public class ResturantService {
 
     public double getPriceDifference(Resturant restaurant1, Resturant restaurant2) {
 
-        return Math.abs(
-                restaurant1.getAveragePrice()
-                        - restaurant2.getAveragePrice()
-        );
+        double difference = restaurant1.getAveragePrice()
+                - restaurant2.getAveragePrice();
+
+        if (difference < 0) {
+            difference = -difference;
+        }
+
+        return difference;
     }
 
 
@@ -120,8 +124,7 @@ public class ResturantService {
     }
     public boolean isSuitable(Resturant restaurant, String preferredCuisine,
                               double maxPrice, double minRating) {
-
-        if (restaurant.getCuisine().equals(preferredCuisine)
+        if (restaurant.getCuisine() == preferredCuisine
                 && restaurant.getAveragePrice() <= maxPrice
                 && restaurant.getRating() >= minRating
                 && restaurant.isOpen()) {
