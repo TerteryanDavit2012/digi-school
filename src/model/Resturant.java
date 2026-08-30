@@ -1,3 +1,5 @@
+package model;
+
 public class Resturant {
     private int id = 1;
     private String name = "II";
@@ -10,9 +12,7 @@ public class Resturant {
     private int yearOpened = 1900;
     private boolean open = false;
 
-    public Resturant(int id, String name, String cuisine, String city,
-                     double rating, double averagePrice, int capacity,
-                     int openingHour, int yearOpened, boolean open) {
+    public Resturant() {
 
     }
 
@@ -41,11 +41,11 @@ public class Resturant {
     }
 
     public void setCuisine(String cuisine) {
-        if (cuisine.equals("ITALIAN") ||
-                cuisine.equals("ASIAN") ||
-                cuisine.equals("MEXICAN") ||
-                cuisine.equals("ARMENIAN")) {
-            this.cuisine = cuisine;
+        switch (cuisine) {
+            case "ITALIAN":
+            case "ARMENIAN":
+            case "ASIAN":
+                this.cuisine = cuisine;
         }
     }
 
