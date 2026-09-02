@@ -123,6 +123,7 @@ public class ResturantService {
 
         return restaurant.getCapacity() - reservedSeats;
     }
+
     public boolean isSuitable(Resturant restaurant, String preferredCuisine,
                               double maxPrice, double minRating) {
         if (restaurant.getCuisine() == preferredCuisine
@@ -237,5 +238,23 @@ public class ResturantService {
         }
 
         return false;
+    }
+
+    public void bublleSort() {
+        int[] x = {15, 0, 3, 9, -7, 6, 9, 11, 2, 66};
+
+        for (int i = 0; i < x.length - 1; i++) {
+            for (int j = 0; j < x.length - 1 - i; j++) {
+                if (x[j] > x[j + 1]) {
+                    int mitq = x[j];
+                    x[j] = x[j + 1];
+                    x[j + 1] = mitq;
+                }
+            }
+        }
+
+        for (int i = 0; i < x.length; i++) {
+            System.out.print(x[i] + " ");
+             }
     }
 }
